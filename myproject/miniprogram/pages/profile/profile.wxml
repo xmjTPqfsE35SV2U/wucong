@@ -1,0 +1,4 @@
+<!--miniprogram/pages/profile/profile.wxml-->
+<!-- <text>miniprogram/pages/profile/profile.wxml</text> -->
+<open-data type="userNickName"></open-data>
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button>

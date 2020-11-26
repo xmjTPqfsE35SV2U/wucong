@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/profile/profile",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "navigationBarTitleText": "电影",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E54847",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#E54847",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/orange.jpg",
+        "selectedIconPath": "images/apple.jpg"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "电影",
+        "iconPath": "images/orange.jpg",
+        "selectedIconPath": "images/apple.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

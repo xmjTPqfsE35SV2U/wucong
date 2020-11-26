@@ -1,0 +1,16 @@
+<!--miniprogram/pages/movie/movie.wxml-->
+<!-- <text>miniprogram/pages/movie/movie.wxml</text>
+<van-button type="default">默认按钮</van-button> -->
+
+<view class="movie" wx:for="{{movieList}}" wx:key="{{index}}">
+  <image class="img" src="{{item.images.large}}"></image>
+  <view class="info">
+    <view class="title">{{item.title}}</view>
+    <view>观众评分：<text class="score">{{item.rating.average}}</text></view>
+    <view>主演：
+      <text wx:for="{{item.casts}}">{{item.name}} </text>
+    </view>
+    <view>年份：{{item.year}}</view> 
+  </view>
+  <button size="mini" class="comment" bindtap="goComment" data-mid="{{item.id}}">评价</button>
+</view>

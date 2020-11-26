@@ -1,0 +1,42 @@
+<!--miniprogram/pages/comment/comment.wxml-->
+<!-- <text>miniprogram/pages/comment/comment.wxml</text> -->
+<view class="" wx:for="{{detail}}" wx:key="{{index}}">
+  <view class="comment">
+    <image class="img" src="{{item.images.large}}"></image>
+    <view class="info">
+      <view class="title">{{item.title}}</view>
+      <view><text class="score">{{item.rating.average}}</text></view>
+      <view>主演：
+        <text wx:for="{{item.casts}}">{{item.name}} </text>
+      </view>
+      <view>{{item.countries}}</view>
+      <view>类型：
+        <text wx:for="{{item.genres}}">{{item}} </text>
+      </view> 
+    </view>
+  </view>
+  
+  <view>
+    <view class="jianjie">简介</view>
+    <text class="neirong">{{item.summary}}</text>
+  </view>
+    <van-field
+      value="{{content}}"
+      placeholder="写一些评价"
+      bind:change="onContentChange"
+    />
+    <van-rate value="{{score}}" bind:change="onScore"/>
+    <!-- <view>
+      <van-button type="warning" size="mini">警告按钮</van-button>
+    </view> -->
+    <!-- <van-button type="danger" size="large">危险按钮</van-button> -->
+    <view>
+      <button class="bt1" size="mini" bindtap="upImg">上传图片</button>
+    </view>
+    <view>
+      <image wx:for="{{images}}" class="imgs" src="{{item}}"></image>
+      <button class="bt2" size="mini" bindtap="submit">提交评价</button>
+    </view>
+    
+   
+</view>
